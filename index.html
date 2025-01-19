@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="logo.png" />
+    <title>Start Game</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, #6a11cb, #2575fc);
+        font-family: Arial, sans-serif;
+      }
+
+      .question {
+        padding-top: 30px;
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }
+
+      .start-button {
+        background: linear-gradient(135deg, #42e695, #3bb2b8);
+        border: 3px solid rgba(255, 255, 255, 0.8);
+        border-radius: 50px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3),
+          0 4px 10px rgba(0, 0, 0, 0.2) inset;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 15px 40px;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .start-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .start-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: skewX(-45deg);
+        transition: left 0.5s ease-in-out;
+      }
+
+      /* Animation Text */
+
+      .styled-text {
+        font-size: 48px;
+        font-weight: bold;
+        color: #f80808eb; /* Best color: A vibrant blue */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2),
+          0 0 25px rgba(165, 152, 152, 0.929); /* Shadow effect */
+        letter-spacing: 2px; /* Adding space between letters */
+        text-transform: uppercase; /* Transform text to uppercase */
+        padding: 20px;
+        background-color: rgba(
+          251,
+          219,
+          10,
+          0.875
+        ); /* White background to enhance visibility */
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .styled-text:hover {
+        color: #2ecc71; /* Color change on hover */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4),
+          0 0 25px rgba(46, 204, 113, 0.7); /* Enhanced shadow on hover */
+        transform: scale(1.1); /* Slightly enlarge text on hover */
+      }
+
+      .start-button:hover::before {
+        left: 200%;
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 10px 20px rgba(0, 255, 150, 0.6);
+        }
+        50% {
+          box-shadow: 0 20px 40px rgba(0, 255, 150, 1);
+        }
+      }
+
+      .start-button:active {
+        animation: glow 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="styled-text">Level 0</div> -->
+    <div class="question">Really you want to play gamen ?</div>
+    <button class="start-button" onclick="goToNextLevel()">Start Game</button>
+
+    <script>
+      function goToNextLevel() {
+        window.location.href = "https://abdulwahedsabri.github.io/Level1/"; // Update with the correct link to the next level
+      }
+    </script>
+  </body>
+</html>
